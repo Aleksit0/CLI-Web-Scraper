@@ -14,13 +14,11 @@ def main():
 
     # response dio
     url = requests.get(unos_urla)
-    soup = BeautifulSoup(url.text, 'html.parser')
-
+    soup = BeautifulSoup(url.text, 'html.parser')   
     print("\n")
 
     # unos HTML elementa
     unos_elementa = input("Enter the HTML5 element : ")
-
     print("\n")
 
     # izbor elemenata
@@ -34,6 +32,8 @@ def main():
         print(soup.ul)
     elif (unos_elementa == 'li'):
         print(soup.li)
+    elif (unos_elementa == 'ol'):
+        print(soup.ol)
     elif (unos_elementa == 'p'):
         print(soup.p)
     elif (unos_elementa == 'h1'):
@@ -54,8 +54,16 @@ def main():
         print(soup.button)
     elif (unos_elementa == 'footer'):
         print(soup.footer)
+    elif (unos_elementa == 'html'):
+        print(soup.html)
+    elif (unos_elementa == 'hr'):
+        print(soup.hr)
+    elif (unos_elementa == 'img'):
+        print(soup.img)
+    elif (unos_elementa == 'span'):
+        print(soup.span)
     else:
-        print("Error! There is more to be added!")
+        print("Error! Element not found!")
 
 if __name__ == "__main__":
     main()
